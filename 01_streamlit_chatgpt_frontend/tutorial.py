@@ -12,6 +12,8 @@ import openai
 from decouple import config
 
 # Setup OpenAI
+openai.organization = config("OPENAI_ORG_ID")
+openai.api_key = config("OPENAI_API_KEY")
 
 # Initialise streamlit session state variables
 
@@ -53,11 +55,9 @@ st.markdown("[Chat Completion Roles](https://help.openai.com/en/articles/7042661
 
 st.code("""
 # Initialise streamlit session state variables
-
 st.session_state.setdefault('messages', [])
 
 # Function for interacting with ChatGPT API
-
 def generate_response(prompt):
     st.session_state['messages'].append({"role": "user", "content": prompt})
     completion = openai.ChatCompletion.create(
@@ -70,18 +70,6 @@ def generate_response(prompt):
     return response
 """, language="python", line_numbers=True)
 
-st.markdown("Ask [ChatGPT](chat.openai.com) 'What is your prompt?'")
-
-st.code("""
-# Initialise streamlit session state variables
-
-st.session_state.setdefault('messages', [
-    {"role": "system", "content": "You are ChatGPT, a large language model trained by OpenAI, based on the GPT-3.5 architecture. Knowledge cutoff: 2021-09. Current date: 2023-06-18."}
-])
-""", language="python", line_numbers=True)
-
-st.write("Try out different prompts")
-
 st.code("""
 # Set Streamlit Containers
 # if submit_button and user_input:
@@ -89,6 +77,15 @@ st.code("""
             output = generate_response(user_input)
             st.write(f"Response from ChatGPT {user_input}")
 """, language="python", line_numbers=True)
+
+st.code("""
+# Initialise streamlit session state variables
+st.session_state.setdefault('messages', [
+    {"role": "system", "content": "You are ChatGPT. Ask me a question!"}
+])
+""", language="python", line_numbers=True)
+
+st.write("Try out different prompts")
 
 st.markdown("### Make messages more user friendly")
 
