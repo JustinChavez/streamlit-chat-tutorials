@@ -27,12 +27,13 @@ from decouple import config
 st.markdown("### Setting up Page Frontend")
 st.code("""
 # Setting page title and header
-st.set_page_config(page_title="ChatWith", page_icon="💬")
+st.set_page_config(page_title="ChatWith")
 st.markdown(f"<h1 style='text-align: center;'>Streamlit + ChatGPT</h1>", unsafe_allow_html=True)
 """, language="python", line_numbers=True)
 
 st.code("""
 # Define Streamlit Containers
+response_container = st.container()
 container = st.container()
 
 # Set Streamlit Containers
