@@ -28,8 +28,7 @@ st.markdown("### Setting up Page Frontend")
 st.code("""
 # Setting page title and header
 st.set_page_config(page_title="ChatWith", page_icon="💬")
-title = st.session_state.site_params['page_details_title'] if "site_params" in st.session_state else "ChatWith"
-st.markdown(f"<h1 style='text-align: center;'>{title}</h1>", unsafe_allow_html=True)
+st.markdown(f"<h1 style='text-align: center;'>Streamlit + ChatGPT</h1>", unsafe_allow_html=True)
 """, language="python", line_numbers=True)
 
 st.code("""
