@@ -1,5 +1,7 @@
 import streamlit as st
 
+st.markdown("[Github Link](https://github.com/JustinChavez/streamlit-chat-tutorials/tree/main)")
+
 st.markdown("### Scaffold")
 st.write("Fill out OpenAI keys in the .env file")
 st.code("""
