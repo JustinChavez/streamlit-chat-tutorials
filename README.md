@@ -6,17 +6,17 @@
 
 2. Clone this repository.
 
-3. Navigate into the project directory + desired tutorial:
-
-   ```bash
-   $ cd streamlit-chat-tutorials/01_streamlit_chatgpt_frontend
-   ```
-
-4. Create a new virtual environment:
+3. Create a new virtual environment:
 
    ```bash
    $ python -m venv venv
    $ . venv/bin/activate
+   ```
+
+4. Navigate into the project directory + desired tutorial:
+
+   ```bash
+   $ cd streamlit-chat-tutorials/01_streamlit_chatgpt_frontend
    ```
 
 5. Install the requirements:
@@ -32,3 +32,8 @@
    ```
 
 7. Fill out the new environment variables file with your keys
+
+8. Make a file called `app.py` to follow alongside the video tutorial and run using
+```
+streamlit run app.py
+```
