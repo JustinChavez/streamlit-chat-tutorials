@@ -64,7 +64,7 @@ def generate_response(prompt):
         model="gpt-3.5-turbo",
         messages=st.session_state['messages'],
     )
-    response = completion.choices[0].message.content #### Why array
+    response = completion.choices[0].message.content
     st.session_state['messages'].append({"role": "assistant", "content": response})
 
     return response
