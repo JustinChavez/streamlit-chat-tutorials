@@ -44,9 +44,9 @@ with container:
         user_input = st.text_area("You:", placeholder="Ask me a question!", key='input', height=100) 
         submit_button = st.form_submit_button(label='Send')
 
-    if submit_button and user_input:
-        with response_container:
-            st.write(f"Prompt to send to GPT {user_input}")
+        if submit_button and user_input:
+            with response_container:
+                st.write(f"Prompt to send to GPT {user_input}")
 
 """, language="python", line_numbers=True)
 
