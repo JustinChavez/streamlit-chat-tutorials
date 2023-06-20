@@ -24,3 +24,11 @@
    ```bash
    $ pip install -r requirements.txt
    ```
+
+6. Make a copy of the example environment variables file:
+
+   ```bash
+   $ cp .env.example .env
+   ```
+
+7. Fill out the new environment variables file with your keys
