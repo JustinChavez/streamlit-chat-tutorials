@@ -30,7 +30,7 @@ st.markdown("### Setting up Page Frontend")
 st.code("""
 # Setting page title and header
 st.set_page_config(page_title="ChatWith")
-st.markdown(f"<h1 style='text-align: center;'>Streamlit + ChatGPT</h1>", unsafe_allow_html=True)
+st.markdown(f"<h1 style='text-align: center;'>StreamlitGPT</h1>", unsafe_allow_html=True)
 """, language="python", line_numbers=True)
 
 st.code("""
@@ -46,7 +46,7 @@ with container:
 
     if submit_button and user_input:
         with response_container:
-            st.write(f"Prompt to send to ChatGPT {user_input}")
+            st.write(f"Prompt to send to GPT {user_input}")
 
 """, language="python", line_numbers=True)
 
@@ -75,13 +75,13 @@ st.code("""
 # if submit_button and user_input:
         # with response_container:
             output = generate_response(user_input)
-            st.write(f"Response from ChatGPT {user_input}")
+            st.write(f"Response from ChatGPT {output}")
 """, language="python", line_numbers=True)
 
 st.code("""
 # Initialise streamlit session state variables
 st.session_state.setdefault('messages', [
-    {"role": "system", "content": "You are ChatGPT. Ask me a question!"}
+    {"role": "system", "content": "Your name is StreamlitGPT"}
 ])
 """, language="python", line_numbers=True)
 
@@ -110,18 +110,7 @@ st.code("""
 st.code("""
 # Set Streamlit Containers
 # with container:
-    ....
-if st.session_state['ai_message']:
-    with response_container:
-        for i in range(len(st.session_state['ai_message'])):
-            message(st.session_state["user_message"][i], is_user=True)
-            message(st.session_state["ai_message"][i])
-""", language="python", line_numbers=True)
-
-st.code("""
-# Set Streamlit Containers
-# with container:
-#    ....
+#    ...
 if st.session_state['ai_message']:
     with response_container:
         for i in range(len(st.session_state['ai_message'])):
@@ -148,7 +137,7 @@ st.code("""
     if 'ai_message' in st.session_state and len(st.session_state['ai_message']) == 0:
         with response_container:
             message(user_input, is_user=True)
-    # with response_container:
+    # output = generate_response(user_input)
 
 # if st.session_state['ai_message']:
     # with response_container:
@@ -158,6 +147,4 @@ st.code("""
             for i in range(len(st.session_state['ai_message'])):
                 message(st.session_state["user_message"][i], is_user=True)
                 message(st.session_state["ai_message"][i])
-
-
 """, language="python", line_numbers=True)
