@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.markdown("### Scaffold")
-
+st.write("Fill out OpenAI keys in the .env file")
 st.code("""
 # Libraries
 import streamlit as st
