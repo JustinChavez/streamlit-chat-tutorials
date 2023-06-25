@@ -33,7 +33,7 @@
 
 7. Fill out the new environment variables file with your keys
 
-8. Make a file called `app.py` to follow alongside the video tutorial and run using
+8. `app.py` contains the code we built in the video. Feel free to clear the file and follow along. Run it with:
 ```
 streamlit run app.py
 ```
