@@ -1,9 +1,9 @@
 import streamlit as st
 
-st.markdown("[Github Link](https://github.com/JustinChavez/streamlit-chat-tutorials/tree/main)")
+st.markdown("Installation instructions 👉 [Github Link](https://github.com/JustinChavez/streamlit-chat-tutorials/tree/main)")
 
 st.markdown("### Scaffold")
-st.write("Fill out OpenAI keys in the .env file. Find them [here](https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key)")
+st.write("Enter the OpenAI keys in the .env file. Find them [here](https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key)")
 st.code("""
 # Libraries
 import streamlit as st
