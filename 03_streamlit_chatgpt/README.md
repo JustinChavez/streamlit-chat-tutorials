@@ -93,7 +93,7 @@ sudo service nginx restart
 You should now be able to view your external URL without the port number.
 
 ## Custom Domain on HTTP
-Sign up for an account on noip.org
+Sign up for an account on [noip.com](https://www.noip.com/)
 
 Create a host name, I used chatwith.hopto.org. Keep all default settings and enter the EC2 External URL for the IPv4 address requested (for example 3.91.241.72).
 
