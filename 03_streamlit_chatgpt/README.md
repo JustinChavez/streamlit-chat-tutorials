@@ -131,7 +131,7 @@ Open the nginx config file
 sudo vi /etc/nginx/sites-available/default
 ```
 
-Paste the following. Be sure to use your custom domain name instead of mine.
+Paste the following. ⚠️ Be sure to use your custom domain name instead of mine.
 ```
 map $http_upgrade $connection_upgrade {
     default upgrade;
